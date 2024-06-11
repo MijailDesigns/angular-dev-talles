@@ -1,0 +1,18 @@
+<h1>DBZ Personajes</h1>
+<hr />
+
+<div class="row">
+  <div class="col">
+    <dbz-list
+      [characterList]="characters"
+      (onDelete)="onDelete($event)"
+    ></dbz-list>
+  </div>
+
+  <div class="col">
+    <!-- cuando se pone con () quiere decir que escuha un evento en este caso esucha el evento (onNewCharacter)="onNewCharacter($event)"-->
+    <dbz-add-character
+      (onNewCharacter)="onNewCharacter($event)"
+    ></dbz-add-character>
+  </div>
+</div>
